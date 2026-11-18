@@ -43,13 +43,28 @@ def get_max_and_min(numbers:list)->tuple[float, float]:
 def calculate_variance(numbers:list)->float:
     # TODO - Complete the function to return the variance of the numbers in the list
     #pass
-
+    n = len(numbers)
+    if n < 2:
+        return 0.0
+    average = calculate_average(numbers)
+    total = 0.0
+    for num in numbers:
+        total += (num - average) ** 2
+    return total / (n - 1)
 
 def calculate_std_dev(numbers:list)->float:
     # TODO - Complete the function to return the standard deviation of the numbers in the list
     #pass
-
+    return math.sqrt(calculate_variance(numbers))
+    
 
 def calculate_median(numbers:list)->float:
     # TODO - Complete the function to return the median of the numbers in the list
     #pass
+    sorted_numbers = sorted(numbers)
+    n = len(sorted_numbers)
+    mid = n // 2
+    if n % 2 == 1:
+        return float(sorted_numbers[mid])
+    else:
+        return (sorted_numbers[mid - 1] + sorted_numbers[mid]) / 2.0
