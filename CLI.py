@@ -1,4 +1,4 @@
-import stats_in_python as stats_m
+import stats_in_pythonDM as stats_m
 import os
 import sys
 

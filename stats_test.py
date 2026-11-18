@@ -1,6 +1,6 @@
 import pytest
 import math
-from stats_in_python import (
+from stats_in_pythonDM import (
     calculate_average,
     get_max_and_min,
     calculate_variance,
