@@ -30,12 +30,14 @@ def load_data(filepath:str, column:int)->tuple[list, int]:
 def calculate_average(numbers:list)->float:
     # TODO - Complete the function to return the average of the list of numbers
     #pass
+    return sum(numbers) / len(numbers)
     
 
 def get_max_and_min(numbers:list)->tuple[float, float]:
     # TODO - Complete the function to return a tuple with the maximum and minimum
     # values in the list, in that order
     #pass
+    return max(numbers), min(numbers)
 
 
 def calculate_variance(numbers:list)->float:
